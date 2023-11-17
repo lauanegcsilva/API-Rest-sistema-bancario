@@ -1,3 +1,7 @@
+require("dotenv/config");
+
+const PORT = process.env.PORT ?? 3333;
+
 const express = require("express");
 
 const rotas = require("./rotas");
@@ -8,4 +12,4 @@ app.use(express.json());
 
 app.use(rotas);
 
-app.listen(3333);
+app.listen(PORT);
